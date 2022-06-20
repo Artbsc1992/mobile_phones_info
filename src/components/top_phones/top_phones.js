@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { getPhones } from '../../redux/phones/phones';
 
-const phoneList = () => {
+const PhoneList = () => {
   const dispatch = useDispatch();
   const phones = useSelector((state) => state.phones);
   useEffect(() => {
@@ -25,3 +25,5 @@ const phoneList = () => {
   )
 
 }
+
+export default PhoneList;
