@@ -1,12 +1,12 @@
 import { Routes, Route } from 'react-router-dom';
-import PhoneList from './components/top_phones/top_phones';
+import HomeList from './components/home/home';
 
 function App() {
   return (
     <div className="App">
-        <Routes>
-          <Route index element={<PhoneList />} />
-        </Routes>
+      <Routes>
+        <Route index element={<HomeList />} />
+      </Routes>
     </div>
   );
 }

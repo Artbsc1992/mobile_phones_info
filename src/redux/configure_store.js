@@ -1,10 +1,10 @@
 import { legacy_createStore as createStore, applyMiddleware, combineReducers } from 'redux';
 import logger from 'redux-logger';
 import thunk from 'redux-thunk';
-import phones from './phones/phones';
+import articles from './articles/articles';
 
 const rootReducer = combineReducers({
-  phones,
+  articles,
 });
 
 const store = createStore(
