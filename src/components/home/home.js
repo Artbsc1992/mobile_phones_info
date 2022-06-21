@@ -16,7 +16,7 @@ const HomeList = () => {
       <div>
         {categories && categories.map(
           (category) => (
-            <Link to={`/${category.name}`} key={category.name}>
+            <Link to={`/category/${category.name}`} key={category.name}>
               {category.name}
               {' '}
               {category.productsCount}

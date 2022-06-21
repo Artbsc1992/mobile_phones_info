@@ -2,10 +2,10 @@ import { fetchArticles } from '../../helper/fetch_articles';
 
 const SHOW_ARTICLES = 'articles/SHOW_ARTICLES';
 
-const getArticles = async (dispatch, getState) => {
+const getArticles = (categoryName) => async (dispatch, getState) => {
   const { articles: currentArticles } = getState();
   if (currentArticles.length === 0) {
-    const articles = await fetchArticles();
+    const articles = await fetchArticles(categoryName);
     dispatch({ type: SHOW_ARTICLES, payload: articles });
   }
 };
