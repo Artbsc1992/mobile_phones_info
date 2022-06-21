@@ -1,44 +1,29 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import { v4 as uuid } from 'uuid';
-import { getArticles } from '../../redux/articles/articles';
+import { Link } from 'react-router-dom';
+import { getCategories } from '../../redux/categories/categories';
 
-/* eslint no-plusplus: "error" */
 const HomeList = () => {
   const dispatch = useDispatch();
-  const articles = useSelector((state) => state.articles);
+  const categories = useSelector((state) => state.categories);
   useEffect(() => {
-    dispatch(getArticles);
+    dispatch(getCategories);
   }, []);
 
-  const categories = [...new Set(articles.map(((article) => (article.category))))];
-  /*eslint-disable */
-  const count = [...articles.reduce((mp, o) => {
-    if (!mp.has(o.category)) mp.set(o.category, { ...o, count: 0 });
-    mp.get(o.category).count++;
-    return mp;
-  }, new Map()).values()];
-  /*eslint-disable */
-  
   return (
     <div className="articles_container">
       <h2>Articles</h2>
       <div>
-      {categories && categories.map(
-        (category) => (
-          <div key={uuid()}>
-            {category}
-          </div>
-        ),
-      )}
-      {count && count.map(
-        (e) => (
-          <span key={uuid()}>
-            {e.count}
-          </span>
-        ),
-      )}
-    </div>
+        {categories && categories.map(
+          (category) => (
+            <Link to={`/${category.name}`} key={category.name}>
+              {category.name}
+              {' '}
+              {category.productsCount}
+            </Link>
+          ),
+        )}
+      </div>
     </div>
 
   );
