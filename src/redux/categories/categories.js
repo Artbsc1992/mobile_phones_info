@@ -1,4 +1,4 @@
-import { fetchCategories } from '../../helper/fetch_articles';
+import { fetchCategories } from '../../helper/fetch';
 
 const SHOW_CATEGORIES = 'articles/SHOW_CATEGORIES';
 
