@@ -3,6 +3,7 @@ import { fetchArticles } from '../../helper/fetch';
 const SHOW_ARTICLES = 'articles/SHOW_ARTICLES';
 const CLEAN_ARTICLES = 'articles/CLEAN_ARTICLES';
 const SHOW_MORE = 'articles/SHOW_MORE';
+const SHOW_LESS = 'articles/SHOW_LESS';
 
 const getArticles = (categoryName) => async (dispatch) => {
   const articles = await fetchArticles(categoryName);
@@ -22,6 +23,11 @@ const showDescription = (id) => ({
   payload: id,
 });
 
+const hideDescription = (id) => ({
+  type: SHOW_LESS,
+  payload: id,
+});
+
 const initialState = [];
 export default function reducer(state = initialState, action = {}) {
   switch (action.type) {
@@ -36,9 +42,18 @@ export default function reducer(state = initialState, action = {}) {
         }
         return { ...article, show: true };
       });
+    case SHOW_LESS:
+      return state.map((article) => {
+        if (article.id !== action.payload) {
+          return article;
+        }
+        return { ...article, show: false };
+      });
     default:
       return state;
   }
 }
 
-export { getArticles, clean, showDescription };
+export {
+  getArticles, clean, showDescription, hideDescription,
+};

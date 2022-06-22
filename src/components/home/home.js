@@ -14,15 +14,15 @@ const HomeList = () => {
     <div className="articles_container">
       <h2>Articles</h2>
       <div>
-        {categories && categories.map(
-          (category) => (
-            <Link to={`/category/${category.name}`} key={category.name}>
-              {category.name}
-              {' '}
-              {category.productsCount}
-            </Link>
-          ),
-        )}
+          {categories && categories.map(
+            (category) => (
+              <Link to={`/category/${category.name}`} key={category.name}>
+                {category.name}
+                {' '}
+                {category.productsCount}
+              </Link>
+            ),
+          )}
       </div>
     </div>
 
