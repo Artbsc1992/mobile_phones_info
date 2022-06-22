@@ -57,12 +57,18 @@
   text-transform: uppercase;
 }
 
-.categories a:nth-child(odd) {
+.categories a:nth-child(1) {
   background-color: rgb(55, 70, 186);
-  box-shadow: 0px 0px 60px 0px rgba(219,61,182,1);
 }
 
-.categories a:nth-child(even) {
+.categories a:nth-child(2) {
   background-color: rgb(72, 89, 215);
-  box-shadow: 0px 0px 60px 0px rgba(219,61,182,1);
+}
+
+.categories a:nth-child(3) {
+  background-color: rgb(72, 89, 215);
+}
+
+.categories a:nth-child(4) {
+  background-color: rgb(55, 70, 186);
 }
