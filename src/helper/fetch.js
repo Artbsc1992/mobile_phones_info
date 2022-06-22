@@ -27,6 +27,7 @@ const fetchCategories = async () => {
     return {
       name: category,
       productsCount: count,
+      class: category.slice(0, 3),
     };
   });
   return categories;
