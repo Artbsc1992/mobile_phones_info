@@ -20,7 +20,7 @@ const clean = (dispatch, getState) => {
 const showDescription = (id) => ({
   type: SHOW_MORE,
   payload: id,
-})
+});
 
 const initialState = [];
 export default function reducer(state = initialState, action = {}) {
@@ -31,10 +31,10 @@ export default function reducer(state = initialState, action = {}) {
       return action.payload;
     case SHOW_MORE:
       return state.map((article) => {
-        if(article.id !== action.payload){
+        if (article.id !== action.payload) {
           return article;
         }
-        return {...article, show: true};
+        return { ...article, show: true };
       });
     default:
       return state;
