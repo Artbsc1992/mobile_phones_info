@@ -1,0 +1,17 @@
+.nav {
+  display: flex;
+  justify-content: center;
+}
+
+.store-name {
+  color: white;
+  margin: 2rem 0;
+}
+
+.cart i {
+  color: white;
+  margin: 2rem 0;
+  font-size: 25px;
+  position: absolute;
+  right: 3%;
+}

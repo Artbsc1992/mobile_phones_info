@@ -5,6 +5,7 @@ import {
   getArticles, clean, showDescription, hideDescription,
 } from '../../redux/articles/articles';
 import LoadingPage from '../loadingPage/loadingPage';
+import BackButton from '../backButton/backButton';
 
 const Category = () => {
   const { categoryName } = useParams();
@@ -25,6 +26,7 @@ const Category = () => {
         )
         : (
           <div>
+            <BackButton />
             {categoryName.toUpperCase()}
             {articles && articles.map((article) => (
               <div key={article.title}>

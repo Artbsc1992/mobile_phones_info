@@ -1,14 +1,17 @@
-import { useNavigate } from 'react-router-dom';
+import './navBar.css';
 
-const NavBar = () => {
-  const navigate = useNavigate();
-  return (
-    <div>
-      <button type="button" onClick={() => navigate(-1)}>
-        <i className="fa-solid fa-arrow-left-long" aria-label="go back" />
-      </button>
+const NavBar = () => (
+  <div className="nav">
+    <div className="logo">
+      <h2 className="store-name">
+        Premium store
+        <i className="fa-solid fa-store home-icon" />
+      </h2>
     </div>
-  );
-};
+    <div className="cart">
+      <i className="fa-solid fa-cart-shopping" />
+    </div>
+  </div>
+);
 
 export default NavBar;
