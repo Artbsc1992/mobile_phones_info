@@ -8,13 +8,9 @@
 
 .home-img {
   margin: 1rem 2rem;
-  width: 20rem;
+  width: 15rem;
   border-radius: 20px;
   box-shadow: 0 0 43px 10px rgba(196, 46, 255, 0.9);
-}
-
-.home-icon {
-  color: rgb(203, 255, 13);
 }
 
 .presentation {
@@ -29,6 +25,16 @@
 
 .open {
   color: #fad961;
+}
+
+.categories-selector {
+  color: #fff;
+  align-self: flex-start;
+  padding: 0.3rem 2rem;
+  width: 100%;
+  background-color: rgb(56, 53, 156);
+  font-family: 'Lato', sans-serif;
+
 }
 
 .categories {
@@ -85,8 +91,13 @@
 }
 
 .footer {
-  position: absolute;
-  bottom: 0;
+  position: relative;
+  top: 2rem;
   color: rgb(184, 182, 182);
   font-size: 1.2rem;
+}
+
+.footer span a {
+  text-decoration: none;
+  color: #fad961;
 }

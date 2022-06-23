@@ -29,6 +29,7 @@ const HomeList = () => {
               We are PREMIUM STORE, we deliver the most
               trending articles just for exclusive customers like you!
             </div>
+            <h4 className="categories-selector">Categories:</h4>
             <div className="categories">
               {categories && categories.map(
                 (category) => (
@@ -44,7 +45,11 @@ const HomeList = () => {
               )}
             </div>
             <footer className="footer">
-              <span>Project build by Arturo</span>
+              <span>
+                Project build by
+                {' '}
+                <a href="https://github.com/Artbsc1992">Arturo</a>
+              </span>
             </footer>
           </div>
         )}
