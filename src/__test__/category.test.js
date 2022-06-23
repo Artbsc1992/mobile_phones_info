@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import { MemoryRouter } from 'react-router-dom';
 import Category from '../components/category/category';
 import store from '../redux/configure_store';
-import App from '../App'
+import App from '../App';
 
 describe('Category page component', () => {
   afterEach(() => {
