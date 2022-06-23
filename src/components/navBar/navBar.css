@@ -1,0 +1,23 @@
+.nav {
+  display: flex;
+  justify-content: center;
+}
+
+.store-name {
+  color: #fad961;
+  margin: 1rem 0;
+  font-size: 15px;
+}
+
+.cart i {
+  color: #fad961;
+  margin: 2rem 0;
+  font-size: 17px;
+  position: absolute;
+  right: 3%;
+  top: -1.5%;
+}
+
+.home-icon {
+  color: #fad961;
+}
