@@ -6,6 +6,9 @@
 
 > It opens a dynamic one page app that shows the items of the category that you selected before.
 
+# App-Screenshot
+
+<img src="src\assets\output-onlinepngtools.png"/>
 
 ## Built With
 
