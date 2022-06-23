@@ -12,7 +12,6 @@ const fetchArticles = async (categoryName) => {
     count: article.rating.count,
     show: false,
   }));
-  console.log(articles);
   return articles;
 };
 
