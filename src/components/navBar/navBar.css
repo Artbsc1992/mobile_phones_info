@@ -4,14 +4,18 @@
 }
 
 .store-name {
-  color: white;
+  color: #fad961;
   margin: 2rem 0;
 }
 
 .cart i {
-  color: white;
+  color: #fad961;
   margin: 2rem 0;
   font-size: 25px;
   position: absolute;
   right: 3%;
+}
+
+.home-icon {
+  color: #fad961;
 }

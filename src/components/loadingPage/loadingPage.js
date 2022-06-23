@@ -12,7 +12,7 @@ const LoadingPage = () => (
       <div />
       <div />
     </div>
-    <div>Loading...</div>
+    <div style={{ color: '#fff' }}>Loading...</div>
   </>
 );
 

@@ -16,12 +16,16 @@ const HomeList = () => {
   return (
     <>
       {categories.length === 0
-        ? <LoadingPage />
+        ? (
+          <div className="loading">
+            <LoadingPage />
+          </div>
+        )
         : (
           <div className="articles_container">
             <img className="home-img" src={home} alt="home" />
             <div className="presentation">
-              <h2>We are open!</h2>
+              <h2 className="open">We are open!</h2>
               We are PREMIUM STORE, we deliver the most
               trending articles just for exclusive customers like you!
             </div>
