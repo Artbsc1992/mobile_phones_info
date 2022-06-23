@@ -8,7 +8,7 @@
 
 .home-img {
   margin: 1rem 2rem;
-  width: 15rem;
+  width: 20rem;
   border-radius: 20px;
   box-shadow: 0 0 43px 10px rgba(196, 46, 255, 0.9);
 }
@@ -16,6 +16,7 @@
 .presentation {
   text-align: center;
   width: 80%;
+  max-width: 700px;
   color: #fff;
   margin: 1rem 0;
   font-size: 20px;
@@ -28,12 +29,15 @@
 }
 
 .categories-selector {
-  color: #fff;
-  align-self: flex-start;
-  padding: 0.3rem 2rem;
-  width: 100%;
+  max-width: 700px;
   background-color: rgb(56, 53, 156);
+  width: 100vw;
+}
+
+.categories-selector h4 {
+  color: #fff;
   font-family: 'Lato', sans-serif;
+  margin: 2px 1rem;
 }
 
 .categories {

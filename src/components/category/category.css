@@ -1,7 +1,8 @@
 .loading {
   position: absolute;
-  left: 42%;
-  top: 40%;
+  left: 42vw;
+  top: 42vh;
+  margin: auto;
 }
 
 .category-title {

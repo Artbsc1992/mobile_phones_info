@@ -29,7 +29,9 @@ const HomeList = () => {
               We are PREMIUM STORE, we deliver the most
               trending articles just for exclusive customers like you!
             </div>
-            <h4 className="categories-selector">Categories:</h4>
+            <div className="categories-selector">
+              <h4>Categories:</h4>
+            </div>
             <div className="categories">
               {categories && categories.map(
                 (category) => (
