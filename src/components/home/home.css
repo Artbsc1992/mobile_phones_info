@@ -34,7 +34,6 @@
   width: 100%;
   background-color: rgb(56, 53, 156);
   font-family: 'Lato', sans-serif;
-
 }
 
 .categories {
@@ -74,6 +73,18 @@
   text-transform: uppercase;
 }
 
+.footer {
+  position: relative;
+  top: 2rem;
+  color: rgb(184, 182, 182);
+  font-size: 1.2rem;
+}
+
+.footer span a {
+  text-decoration: none;
+  color: #fad961;
+}
+
 .categories a:nth-child(1) {
   background-color: rgb(55, 70, 186);
 }
@@ -88,16 +99,4 @@
 
 .categories a:nth-child(4) {
   background-color: rgb(55, 70, 186);
-}
-
-.footer {
-  position: relative;
-  top: 2rem;
-  color: rgb(184, 182, 182);
-  font-size: 1.2rem;
-}
-
-.footer span a {
-  text-decoration: none;
-  color: #fad961;
 }
