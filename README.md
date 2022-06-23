@@ -8,7 +8,7 @@
 
 # App-Screenshot
 
-<img src="src\assets\output-onlinepngtools.png"/>
+<img src="src\assets\screenShot.png"/>
 
 ## Built With
 
