@@ -6,6 +6,7 @@ import {
 } from '../../redux/articles/articles';
 import LoadingPage from '../loadingPage/loadingPage';
 import BackButton from '../backButton/backButton';
+import './category.css';
 
 const Category = () => {
   const { categoryName } = useParams();
@@ -20,37 +21,40 @@ const Category = () => {
     <>
       {articles.length === 0
         ? (
-          <div>
+          <div className="loading">
             <LoadingPage />
           </div>
         )
         : (
-          <div>
+          <div className="category-container">
             <BackButton />
-            {categoryName.toUpperCase()}
+            <h1 className="category-title">
+              {categoryName.toUpperCase()}
+            </h1>
             {articles && articles.map((article) => (
-              <div key={article.title}>
-                <img alt="img" src={article.img} />
-                <h2>{article.price}</h2>
-                <h4>{article.title}</h4>
+              <div key={article.title} className="element">
+                <img alt="img" src={article.img} className="image" />
+                <span className="rating">{`Rating ${article.rate}/5 - Stock: ${article.count} units`}</span>
+                <h2 className="price">
+                  Price:
+                  $
+                  {article.price}
+                </h2>
+                <h4 className="name">{article.title}</h4>
                 {!article.show
                   ? (
-                    <button type="button" onClick={() => dispatch(showDescription(article.id))}>
-                      Description
+                    <button className="desc" type="button" onClick={() => dispatch(showDescription(article.id))}>
+                      Tap for Description
                     </button>
                   )
                   : (
-                    <button type="button" onClick={() => dispatch(hideDescription(article.id))}>
+                    <button className="desc" type="button" onClick={() => dispatch(hideDescription(article.id))}>
                       Hide
                     </button>
                   )}
-                <p style={{ display: article.show ? 'block' : 'none' }}>{article.description}</p>
-                <span>{`${article.rate}/5`}</span>
-                {' '}
-                <span>{article.count}</span>
+                <p className="text-desc" style={{ display: article.show ? 'block' : 'none' }}>{article.description}</p>
               </div>
             ))}
-
           </div>
         )}
     </>
