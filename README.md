@@ -6,6 +6,10 @@
 
 > It opens a dynamic one page app that shows the items of the category that you selected before.
 
+# App description video
+
+[Video](https://www.loom.com/share/4120c17ec76b4eb3adbcf80d9c1fdb1a)
+
 # App-Screenshot
 
 <img src="src\assets\screenShot.png"/>
