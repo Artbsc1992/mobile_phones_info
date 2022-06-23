@@ -31,4 +31,3 @@ describe('Home page component', () => {
     await act(() => expect(dom).toMatchSnapshot());
   });
 });
-
