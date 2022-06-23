@@ -4,7 +4,7 @@
 
 > App created by using REACT and REDUX displaying a home page with all four categories were you can select what you need.
 
-> It opens a dynamic one page that shows the items of the category that you selected before.
+> It opens a dynamic one page app that shows the items of the category that you selected before.
 
 
 ## Built With
