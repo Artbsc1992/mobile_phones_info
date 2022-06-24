@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { getCategories } from '../../redux/categories/categories';
 import LoadingPage from '../loadingPage/loadingPage';
@@ -8,7 +8,10 @@ import './home.css';
 
 const HomeList = () => {
   const dispatch = useDispatch();
+  const [filter, setFilter] = useState('');
   const categories = useSelector((state) => state.categories);
+  const filterCategory = useSelector((state) => state.categories
+    .filter((category) => category.name.toLowerCase().includes(filter.toLowerCase())));
   useEffect(() => {
     dispatch(getCategories);
   }, []);
@@ -30,10 +33,14 @@ const HomeList = () => {
               trending articles just for exclusive customers like you!
             </div>
             <div className="categories-selector">
-              <h4>Categories:</h4>
+              <h4>
+                Categories:
+                {' '}
+                <input className="input" placeholder="Filter by category" type="text" value={filter} onChange={(e) => setFilter(e.target.value)} />
+              </h4>
             </div>
             <div className="categories">
-              {categories && categories.map(
+              {categories && filterCategory.map(
                 (category) => (
                   <Link to={`/category/${category.name}`} key={category.name} className={category.class}>
                     <p>{category.name}</p>
